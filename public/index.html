@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💫🌚🎙️ Podcasty 🙂‍↕️👌🤩</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- font-awesome css cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+
+    <div class="nav-wrapper">
+      <nav class="nav">
+        <h1 class="nav-title">Podcasty Player Spot</h1>
+        <i class="fas fa-microphone-alt"></i>
+
+        <!-- Mobile navigation  -->
+
+        <div class="nav-list">
+          <span id="searchLink" class="selected">Search</span
+          ><span id="listenLink">Listen</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="search-container">
+        <!-- search history  -->
+        <div class="custom-select">
+          <select
+            name="searchHistory"
+            id="searchHistory"
+            title="Search History"
+          >
+            <option value="">Select a previous search</option>
+          </select>
+        </div>
+
+        <!-- Search input  -->
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by Podcast / Topic"
+        />
+
+        <!-- search button  -->
+        <div class="search-buttons">
+          <button id="searchButton">Search</button>
+          <button type="reset" id="resetButton">Clear History</button>
+        </div>
+      </div>
+      <!-- Main container -->
+      <div class="main-container">
+        <!-- loader  -->
+        <div class="loader-container" id="loader">
+          <i class="fas fa-microphone-alt"></i>
+        </div>
+
+        <!-- Cards container  -->
+
+        <div id="response" class="cards-container">
+          <div class="card">
+            <img src="podcaster.png" alt="Podcast image" srcset="" />
+            <div class="card-content">
+              <h3>Podcast title</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
+                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
+                Laudantium, voluptatibus. Saepe, molestias?
+              </p>
+              <p class="episode-count">Episode: 50</p>
+              <p class="pub-date">Newest Episode: 2024-09-01</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="podcaster.png" alt="Podcast image" srcset="" />
+            <div class="card-content">
+              <h3>Podcast title</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
+                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
+                Laudantium, voluptatibus. Saepe, molestias?
+              </p>
+              <p class="episode-count">Episode: 50</p>
+              <p class="pub-date">Newest Episode: 2024-09-01</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="podcaster.png" alt="Podcast image" srcset="" />
+            <div class="card-content">
+              <h3>Podcast title</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
+                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
+                Laudantium, voluptatibus. Saepe, molestias?
+              </p>
+              <p class="episode-count">Episode: 50</p>
+              <p class="pub-date">Newest Episode: 2024-09-01</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="podcaster.png" alt="Podcast image" srcset="" />
+            <div class="card-content">
+              <h3>Podcast title</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
+                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
+                Laudantium, voluptatibus. Saepe, molestias?
+              </p>
+              <p class="episode-count">Episode: 50</p>
+              <p class="pub-date">Newest Episode: 2024-09-01</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="podcaster.png" alt="Podcast image" srcset="" />
+            <div class="card-content">
+              <h3>Podcast title</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
+                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
+                Laudantium, voluptatibus. Saepe, molestias?
+              </p>
+              <p class="episode-count">Episode: 50</p>
+              <p class="pub-date">Newest Episode: 2024-09-01</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Player Container  -->
+      <div class="player-container">
+        <div class="player">
+          <!-- Image -->
+          <div class="img-container">
+            <img src="podcaster.png" alt="That podcast image" id="image" />
+          </div>
+          <!-- Title container  -->
+          <div class="title-container">
+            <h2 id="title">Podcast title</h2>
+            <h3 id="datePublished">Date Published</h3>
+          </div>
+          <audio src="music/jacinto-1.mp3"></audio>
+          <div class="progress-container" id="progress-container">
+            <!-- Progress -->
+            <div class="progress-container" id="progress-container">
+              <div class="progress" id="progress"></div>
+              <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+            </div>
+            <!-- Controls -->
+            <div class="player-controls">
+              <i class="fas fa-backward" id="prev" title="-15 Seconds"></i>
+              <i class="fas fa-play main-button" id="play" title="Play"></i>
+              <i class="fas fa-forward" id="next" title="+15 Seconds"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Queue  -->
+        <div class="queue">
+          <div class="queue-item">
+            <img src="podcaster.png" alt="Episode de ce podcast" srcset="" />
+            <div class="queue-content">
+              <h3>Episode Title is going to go here, hihi</h3>
+              <div class="icon-container" title="Play Podcast">
+                <i class="fas fa-play-circle" title="Play now"></i>
+                <i class="fas fa-trash-alt" title="Remove from queue"></i>
+              </div>
+            </div>
+          </div>
+          <div class="queue-item">
+            <img src="podcaster.png" alt="Episode de ce podcast" srcset="" />
+            <div class="queue-content">
+              <h3>Episode Title is going to go here, hihi</h3>
+              <div class="icon-container" title="Play Podcast">
+                <i class="fas fa-play-circle" title="Play now"></i>
+                <i class="fas fa-trash-alt" title="Remove from queue"></i>
+              </div>
+            </div>
+          </div>
+          <div class="queue-item">
+            <img src="podcaster.png" alt="Episode de ce podcast" srcset="" />
+            <div class="queue-content">
+              <h3>Episode Title is going to go here, hihi</h3>
+              <div class="icon-container" title="Play Podcast">
+                <i class="fas fa-play-circle" title="Play now"></i>
+                <i class="fas fa-trash-alt" title="Remove from queue"></i>
+              </div>
+            </div>
+          </div>
+          <div class="queue-item">
+            <img src="podcaster.png" alt="Episode de ce podcast" srcset="" />
+            <div class="queue-content">
+              <h3>Episode Title is going to go here, hihi</h3>
+              <div class="icon-container" title="Play Podcast">
+                <i class="fas fa-play-circle" title="Play now"></i>
+                <i class="fas fa-trash-alt" title="Remove from queue"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script  -->
+    <script src="script.js"></script>
+  </body>
+</html>
