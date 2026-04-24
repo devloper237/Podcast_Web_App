@@ -12,6 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <!-- Navigation -->
@@ -65,78 +66,7 @@
 
         <!-- Cards container  -->
 
-        <div id="response" class="cards-container">
-          <div class="card">
-            <img src="podcaster.png" alt="Podcast image" srcset="" />
-            <div class="card-content">
-              <h3>Podcast title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
-                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
-                Laudantium, voluptatibus. Saepe, molestias?
-              </p>
-              <p class="episode-count">Episode: 50</p>
-              <p class="pub-date">Newest Episode: 2024-09-01</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="podcaster.png" alt="Podcast image" srcset="" />
-            <div class="card-content">
-              <h3>Podcast title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
-                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
-                Laudantium, voluptatibus. Saepe, molestias?
-              </p>
-              <p class="episode-count">Episode: 50</p>
-              <p class="pub-date">Newest Episode: 2024-09-01</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="podcaster.png" alt="Podcast image" srcset="" />
-            <div class="card-content">
-              <h3>Podcast title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
-                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
-                Laudantium, voluptatibus. Saepe, molestias?
-              </p>
-              <p class="episode-count">Episode: 50</p>
-              <p class="pub-date">Newest Episode: 2024-09-01</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="podcaster.png" alt="Podcast image" srcset="" />
-            <div class="card-content">
-              <h3>Podcast title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
-                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
-                Laudantium, voluptatibus. Saepe, molestias?
-              </p>
-              <p class="episode-count">Episode: 50</p>
-              <p class="pub-date">Newest Episode: 2024-09-01</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="podcaster.png" alt="Podcast image" srcset="" />
-            <div class="card-content">
-              <h3>Podcast title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nesciunt animi eum aut quas asperiores beatae dolores ex minima
-                tempora culpa. Dolorem consectetur quod ratione laudantium esse.
-                Laudantium, voluptatibus. Saepe, molestias?
-              </p>
-              <p class="episode-count">Episode: 50</p>
-              <p class="pub-date">Newest Episode: 2024-09-01</p>
-            </div>
-          </div>
-        </div>
+        <div id="response" class="cards-container"></div>
       </div>
       <!-- Player Container  -->
       <div class="player-container">
@@ -150,28 +80,41 @@
             <h2 id="title">Podcast title</h2>
             <h3 id="datePublished">Date Published</h3>
           </div>
-          <audio src="music/jacinto-1.mp3"></audio>
+          <audio src="" id="player"></audio>
+          <!-- Progress -->
           <div class="progress-container" id="progress-container">
-            <!-- Progress -->
-            <div class="progress-container" id="progress-container">
-              <div class="progress" id="progress"></div>
-              <div class="duration-wrapper">
-                <span id="current-time">0:00</span>
-                <span id="duration">0:00</span>
-              </div>
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
             </div>
-            <!-- Controls -->
-            <div class="player-controls">
-              <i class="fas fa-backward" id="prev" title="-15 Seconds"></i>
-              <i class="fas fa-play main-button" id="play" title="Play"></i>
-              <i class="fas fa-forward" id="next" title="+15 Seconds"></i>
-            </div>
+          </div>
+          <!-- Controls -->
+          <div class="player-controls">
+            <i
+              class="fas fa-backward"
+              id="prev"
+              title="-15 Seconds"
+              id="prev"
+            ></i>
+            <i
+              class="fas fa-play main-button"
+              id="play"
+              title="Play"
+              id="play"
+            ></i>
+            <i
+              class="fas fa-forward"
+              id="next"
+              title="+15 Seconds"
+              id="next"
+            ></i>
           </div>
         </div>
 
         <!-- Queue  -->
         <div class="queue">
-          <div class="queue-item">
+          <!-- <div class="queue-item">
             <img src="podcaster.png" alt="Episode de ce podcast" srcset="" />
             <div class="queue-content">
               <h3>Episode Title is going to go here, hihi</h3>
@@ -210,7 +153,7 @@
                 <i class="fas fa-trash-alt" title="Remove from queue"></i>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

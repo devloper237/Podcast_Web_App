@@ -1,0 +1,20 @@
+{
+  "short_name": "Caspod",
+  "name": "Pod the Cast",
+  "icons": [
+    {
+      "src": "potty_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "potty_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "white"
+}

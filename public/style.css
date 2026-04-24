@@ -330,6 +330,19 @@ button:hover {
   transition: width 0.1s linear;
 }
 
+@keyframes loadingAnimation {
+  0%,
+  100% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+.loading {
+  animation: loadingAnimation 2s infinite ease-in-out;
+}
 .duration-wrapper {
   position: relative;
   top: -25px;
@@ -384,6 +397,10 @@ button:hover {
   display: flex;
   margin-bottom: 10px;
   border-radius: 12px;
+}
+
+.queue-item:last-child {
+  margin-bottom: 0;
 }
 
 .queue-item img {
